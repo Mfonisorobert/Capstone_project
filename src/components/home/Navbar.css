@@ -92,7 +92,13 @@ color: #02035D;
 .btn2:hover{
     background-color: #00749e;
 }
+.btn1:focus {
+    outline: none;
+}
 
+.btn2:focus {
+    outline: none;
+}
 .nav-link {
     color: #0096C7;  /* Default color */
     text-decoration: none;
