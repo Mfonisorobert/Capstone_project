@@ -5,6 +5,7 @@ import Our_features from './components/home/Our_features'
 import Insights from './components/home/Insights'
 import Testimonies from './components/home/Testimonies'
 import Sign from './components/home/Sign'
+import Footer from './components/home/Footer'
 import './App.css'
 
 const App = () => {
@@ -32,8 +33,9 @@ const App = () => {
         <Sign/>
         </section>
 
-        
-        {/* <Footer/> */}
+        <section id="Footer">
+        <Footer/>
+        </section>
         
 
       </div>

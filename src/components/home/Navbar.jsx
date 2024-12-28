@@ -14,7 +14,7 @@ const Navbar = () => {
       <li><a href="#Insights" className="nav-link">About Us</a></li>
         <li>Consult a Doctor</li>
         <li>Blog</li>
-        <li>Contact Us</li>
+        <li><a href="#Footer" className="nav-link">Contact Us</a></li>
         <a href="#Sign"><button className='btn1'>Sign Up</button></a>
         <a href="#"><button className='btn2'>Book Appointment</button></a>
       </ul>
