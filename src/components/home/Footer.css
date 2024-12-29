@@ -1,6 +1,7 @@
 .footer__container{
     height: 70%;
-    /* background-color: white; */
+    /* background-color: blue; */
+    /* margin: 0px 100px; */
 }
 
 .footer__container__grid{
@@ -12,21 +13,29 @@
     padding-top: 20px;
     
     
+    
+  }
+
+  .footer__header1{
+
   }
   
+
+
   /* Headings */
+
   .footer__header h3 {
     font-family: poppins;
     border-bottom-width: 100px;
     font-size: 16px;
     margin-bottom: 20px;
-    /* text-transform: uppercase; */
     border-bottom: 1px solid #0096C7; /* Underline effect */
     padding-bottom: 10px;
-    /* background-color: red; */
     font-weight: 500;
   }
-  
+
+
+
   /* Text */
   .footer__header p {
     font-size: 15px;
@@ -83,6 +92,8 @@
   }
 
   .icon10{
-    width: 200px;
+    width: 180px;
     margin-top: 80px;
+    margin-left: 20px;
+
   }

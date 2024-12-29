@@ -30,6 +30,8 @@ const Footer = () => {
       <li><a href="" target="_blank">Feedback</a></li>
     </ul>
   </div>
+
+
   <div class="footer__header">
     <h3>Legal</h3>
     <ul>
