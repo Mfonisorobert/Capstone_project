@@ -16,9 +16,10 @@ const Navbar = () => {
         <li><a href="#Insights" className="nav-link">Blog</a></li>
         <li><a href="#Footer" className="nav-link">Contact Us</a></li>
         <div className='bt'>
-                <a href="#Sign"><button className='btn1'>Sign Up</button></a>
+                <a href="#"><button className='btn1'>Login</button></a>
+                <a href="#Sign"><button className='btn2'>Sign Up</button></a>
                 </div>
-        {/* <a href="#"><button className='btn2'>Book Appointment</button></a> */}
+        
       </ul>
       </div>
   )
