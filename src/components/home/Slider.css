@@ -48,7 +48,7 @@
 
 
 
-
+  
 
    
   .slider__container{
@@ -63,6 +63,7 @@
     position: relative;
     width: calc(1000px * 3 + 20px * 2); /* 3 boxes + 2 margins */
     padding-bottom: 50px;
+   
     height: 62vh;
   }
   
@@ -94,8 +95,6 @@
     margin-left: 90px;
     margin-top: 90px;
     padding-right: 30px;
-
-
     display: flex;
     align-items: center;
     justify-content: center;

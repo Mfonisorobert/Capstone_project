@@ -173,8 +173,8 @@ const Slider = () => {
                 ))}
             </div>
             <div className='arrow'>
-        <button className="arrow left" onClick={slideLeft}>&#10094;</button>
-        <button className="arrow right" onClick={slideRight}>&#10095;</button>
+        {/* <button className="arrow left" onClick={slideLeft}>&#10094;</button> */}
+        {/* <button className="arrow right" onClick={slideRight}>&#10095;</button> */}
         </div>  
         </div>
         
