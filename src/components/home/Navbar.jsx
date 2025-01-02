@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import Logo from '../../assets/lifelogo.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -15,11 +16,18 @@ const Navbar = () => {
         <li>Consult a Doctor</li>
         <li><a href="#Insights" className="nav-link">Blog</a></li>
         <li><a href="#Footer" className="nav-link">Contact Us</a></li>
-        <div className='bt'>
-                <a href="#"><button className='btn1'>Login</button></a>
-                <a href="#Sign"><button className='btn2'>Sign Up</button></a>
+//<<<<<<< features/home
+     //   <div className='bt'>
+                //<a href="#"><button className='btn1'>Login</button></a>
+               // <a href="#Sign"><button className='btn2'>Sign Up</button></a>
                 </div>
         
+=======
+      //  <Link to={'/register'}>
+         // <button className='btn1'>Sign Up</button>
+       // </Link>
+       // <a href="#"><button className='btn2'>Book Appointment</button></a>
+//>>>>>>> main
       </ul>
       </div>
   )
