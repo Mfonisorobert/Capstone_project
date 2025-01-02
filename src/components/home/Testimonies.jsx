@@ -1,4 +1,7 @@
 import React from 'react'
+import lady from '../../assets/lady.png'
+import man from '../../assets/man.png'
+import granny from '../../assets/granny.png'
 import './Testimonies.css'
 
 const Testimonies = () => {
@@ -20,40 +23,29 @@ const Testimonies = () => {
           <div className="square__grid">
               <div className="square1">
               <div className='text_icon'>
-              {/* <img className='icon1'src={jam_medical} alt="icon"/> */}
-              <h3>Instant Consultation</h3>
+              <img className='iconx'src={lady} alt="icon"/>
+              {/* <h3>Instant Consultation</h3> */}
               </div>
-                <h5>Get expert health advice whenever you need it. With our instant consultation feature, connect with certified professionals in real time for personalized guidance and support. No waiting, just answers—right when you need them.</h5>
-              
-                <a href="https://demo.olivethemes.com/exo/2022/08/22/professionals-team-management-ideas/" target="_blank" rel="noopener noreferrer">
-              <h2>Start Now <i class="fas fa-angle-right styled_icon"></i></h2>  
-              </a>
+                <h5>“As someone managing asthma, this tracker has been a game-changer. It helps me monitor triggers, track symptoms, and stay consistent with my medication. The reminders and health insights have made managing my condition so much easier. I finally feel in control of my health!”</h5>
               </div>
         
         
         
               <div className="square2">
               <div className='text_icon'>
-              {/* <img className='icon2' src={wave} alt="icon"/> */}
-              <h3>Health Tracking</h3>
+              <img className='icony' src={man} alt="icon"/>
+              {/* <h3>Health Tracking</h3> */}
               </div>
-                <h5>Stay on top of your wellness journey with our comprehensive health tracking feature. Monitor your daily activities, diet, sleep, and fitness progress all in one place. Gain valuable insights to make informed decisions and achieve your health goals effortlessly.</h5>
-                <a href="https://demo.olivethemes.com/exo/2022/08/22/professionals-team-management-ideas/" target="_blank" rel="noopener noreferrer">
-              <h2>Start Now <i class="fas fa-angle-right styled_icon"></i></h2>  
-              </a>
-                    </div>
+                <h5> I thought it was too late to turn my health around, but this tracker proved me wrong. It helped me stay consistent with my fitness goals, reminded me to take my medications, and even improved my sleep patterns. The personalized features made it easy to stick with, and now I feel better than I have in years!"</h5>
+              </div>
         
         
               <div className="square3">
               <div className='text_icon'>
-              {/* <img className='icon3'src={medbrief} alt="icon"/> */}
-              <h3>Personalized Fitness Plans</h3>
+              <img className='iconz'src={granny} alt="icon"/>
+              {/* <h3>Personalized Fitness Plans</h3> */}
               </div>
-                <h5>Achieve your fitness goals with a plan tailored just for you. Our personalized fitness plans adapt to your preferences, goals, and fitness level, providing step-by-step guidance and progress tracking to keep you motivated and on track.</h5>
-                <a href="https://demo.olivethemes.com/exo/2022/08/22/professionals-team-management-ideas/" target="_blank" rel="noopener noreferrer">
-              <h2>Start Now <i class="fas fa-angle-right styled_icon"></i></h2>  
-              </a>
-              
+                <h5>At 74, keeping track of my health felt overwhelming, but this tracker has made it so simple. From reminders for my medications to tracking my daily walks, it’s been a blessing. I feel more independent and confident about my health now.</h5>          
               </div>
               </div>
         

@@ -1,6 +1,6 @@
 .footer__container{
-    height: 70vh;
-    background-color: white;
+    height: 83vh;
+    background-color: white(255, 0, 0);
     /* margin: 0px 100px; */
 }
 
@@ -16,12 +16,7 @@
     
   }
 
-  .footer__header1{
-
-  }
   
-
-
   /* Headings */
 
   .footer__header h3 {
