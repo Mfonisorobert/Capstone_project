@@ -1,0 +1,101 @@
+.bg {
+    background-image: url("../../assets/stairs.jpg");
+    width: 100vw;
+}
+
+.bg2 {
+    background-color: white;
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 0px;
+    opacity: 0.9;
+    padding-bottom: 100px;
+}
+
+.form-section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    align-items: center;
+    padding-left: 100px;
+}
+
+#two {
+    width: 75%;
+    justify-content: space-between;
+}
+
+#two input, #two select {
+    width: 183px;
+}
+
+#username {
+    width: 226px;
+}
+
+label {
+    padding: 0 0 10px 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: left;
+    color: #000;
+    display: block;
+}
+
+.h1 {
+    margin-bottom: 100px;
+    padding-top: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46.8px;
+    text-align: center;
+    color: #000;
+    display: block;
+}
+
+.input, .select {
+    height: 3.785rem;
+    border-radius: 1.875rem;
+    background-color: #EDE9E9;
+    opacity: 1;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#name {
+    width: 415px;
+    margin-right: 60px;
+}
+
+#email {
+    width: 557px;
+}
+
+#password {
+    margin-right: 120px;
+}
+
+#four input {
+    width: 18.75rem;
+}
+
+.button {
+    background-color: #02035D;
+    border-radius: 1.875rem;
+    border: none;
+    width: 183px;
+    height: 3.785rem;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+#submit {
+    display: flex;
+    justify-content: end;
+    padding-right: 100px;
+}
