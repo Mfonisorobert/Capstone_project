@@ -5,9 +5,9 @@ import Sign_Up from "../components/sign up/Sign_Up";
 export const Register = () => {
     return (
         <>
-        <Footer />
         <Navbar />
         <Sign_Up />        
+        <Footer />
         </>
     )
 }
