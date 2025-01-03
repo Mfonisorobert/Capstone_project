@@ -1,13 +1,16 @@
 import React from 'react'
 import './Navbar.css'
 import Logo from '../../assets/lifelogo.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <a href="#home" className="logo">
+      <div className="logo">
+        <Link to={'../'}>
         <img src={Logo} alt="Logo"/>
-      </a>
+        </Link>
+      </div>
       <ul className='navbar__ul'>
       <li><a href="#home" className="nav-link">Home</a></li>
       <li><a href="#Our_features" className="nav-link">Features</a></li>
@@ -17,7 +20,9 @@ const Navbar = () => {
         <li><a href="#Footer" className="nav-link">Contact Us</a></li>
         <div className='bt'>
                 <a href="#"><button className='btn1'>Login</button></a>
-                <a href="#Sign"><button className='btn2'>Sign Up</button></a>
+                <Link to={'./register'}>
+                  <a href="#Sign"><button className='btn2'>Sign Up</button></a>
+                </Link>
                 </div>
         
       </ul>

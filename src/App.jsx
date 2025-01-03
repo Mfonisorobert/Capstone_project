@@ -12,43 +12,43 @@ import { AppRouter } from './router/routes'
 
 const App = () => {
   return <AppRouter />
-  // (
-  //   <main className='container'>
-  //     <Navbar/>
-  //     <div>
-  //     <section id="home">
-  //     <Hero/>
-  //     </section>
+   return (
+    <main className='container'>
+      <Navbar/>
+      <div>
+      <section id="home">
+      <Hero/>
+      </section>
       
-  //     <section id="Our_features">
-  //       <Our_features/>
-  //       </section>
+      <section id="Our_features">
+        <Our_features/>
+        </section>
         
-  //       <section id="Insights">
-  //       <Insights/>
-  //       </section>
+        <section id="Insights">
+        <Insights/>
+        </section>
 
-  //       {/* <section id="Testimonies">
-  //       <Testimonies/>
-  //       </section> */}
+        {/* <section id="Testimonies">
+        <Testimonies/>
+        </section> */}
 
-  //       <section id="Blog">
-  //       <Slider/>
-  //       </section>
+        <section id="Blog">
+        <Slider/>
+        </section>
 
-  //       <section id="Sign">
-  //       <Sign/>
-  //       </section>
+        <section id="Sign">
+        <Sign/>
+        </section>
 
-  //       <section id="Footer">
-  //       <Footer/>
-  //       </section>
+        <section id="Footer">
+        <Footer/>
+        </section>
         
 
-  //     </div>
-  //   </main>
+      </div>
+    </main>
     
-  // )
+  )
 }
 
 export default App

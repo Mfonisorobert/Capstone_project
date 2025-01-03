@@ -4,28 +4,28 @@ import './Sign_Up.css'
 const Sign_Up = () => {
   return (
 <>
-      <main className='bg container'>
+      <main className='bg'>
         <div className='bg2'>
-          <h1>Create your Profile</h1>
+          <h1 className='h1'>Create your Profile</h1>
           <form action="">
             <section id='one' className='form-section'>
               <div className=''>
                 <label htmlFor="name"> Full Name</label>
-                <input type="text" id='name' />
+                <input className='input' type="text" id='name' />
               </div>
               <div className=''>
                 <label htmlFor="email">Email</label>
-                <input type="email" id='email' />
+                <input type="email" className='input' id='email' />
               </div>
             </section>
             <section id='two' className='form-section'>
               <div className=''>
                 <label htmlFor="dob">Date of Birth</label>
-                <input type="date" id='dob' />
+                <input type="date" id='dob' className='input' />
               </div>
               <div className=''>
                 <label htmlFor="gender">Gender</label>
-                <select id='gender'>
+                <select className='select' id='gender'>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="other">Other</option>
@@ -33,31 +33,31 @@ const Sign_Up = () => {
               </div>
               <div className=''>
                 <label htmlFor="weight">Weight</label>
-                <input type="number" id='weight' />
+                <input type="number" id='weight' className='input' />
               </div>
               <div className=''>
                 <label htmlFor="height">Height</label>
-                <input type="number" id='height' />
+                <input type="number" id='height' className='input' />
               </div>
             </section>
             <section className='form-section'>
               <div className=''>
                 <label htmlFor="username">Username</label>
-                <input type="text" id='username' />
+                <input type="text" id='username' className='input' />
               </div>        
             </section>
             <section id='four' className='form-section'>
               <div className=''>
                 <label htmlFor="password"> Password</label>
-                <input type="text" id='password' />
+                <input type="text" id='password' className='input' />
               </div>
               <div className=''>
                 <label htmlFor="confirm">Confirm Password</label>
-                <input type="text" id='confirm' />
+                <input type="text" id='confirm' className='input' />
               </div>
             </section>
             <section id='submit'>
-            <button type='submit' className=''>Create</button>
+            <button type='submit' className='button'>Create</button>
             </section>
           </form>
         </div>
