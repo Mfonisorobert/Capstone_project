@@ -1,6 +1,7 @@
 import React from 'react'
 import imageman from '../../assets/imageman.png'
 import './Sign.css'
+import { Link } from 'react-router-dom'
 
 const Sign = () => {
   return (
@@ -13,8 +14,10 @@ const Sign = () => {
     tracker. Sign up now and <br/> make every 
     step count!</h5>
 
+    <Link to={'./register'}>
     <button className="butn1">Sign Up Now</button>
-        </div>
+</Link>
+            </div>
         <div> 
         <img className='image'src={imageman} alt="image"/>
         </div>
