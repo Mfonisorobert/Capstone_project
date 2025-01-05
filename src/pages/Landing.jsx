@@ -12,7 +12,7 @@ import Slider from '../components/home/Slider'
 const Landing = () => {
   return (
     <main className='container'>
-      <Navbar/>
+      <Navbar login={true}/>
       <div>
       <section id="home">
       <Hero/>
