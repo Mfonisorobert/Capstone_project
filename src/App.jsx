@@ -7,8 +7,12 @@ import Testimonies from './components/home/Testimonies'
 import Sign from './components/home/Sign'
 import Footer from './components/home/Footer'
 import './App.css'
-import Slider from './components/home/Slider'
+//<<<<<<< features/home
+// import Slider from './components/home/Slider'
+//=======
+//import Slider from './components/home/Slider'
 import { AppRouter } from './router/routes'
+//>>>>>>> main
 
 const App = () => {
   return <AppRouter />
@@ -28,12 +32,8 @@ const App = () => {
         <Insights/>
         </section>
 
-        {/* <section id="Testimonies">
+        <section id="Testimonies">
         <Testimonies/>
-        </section> */}
-
-        <section id="Blog">
-        <Slider/>
         </section>
 
         <section id="Sign">
@@ -44,6 +44,10 @@ const App = () => {
         <Footer/>
         </section>
         
+
+        {/* <section id="Blog">
+        <Slider/>
+        </section> */}
 
       </div>
     </main>
