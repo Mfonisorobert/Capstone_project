@@ -1,14 +1,14 @@
 import "../App.css";
+import Tracker from "../components/health-tracker/Tracker";
 import Footer from "../components/home/Footer";
-import SignIn from "../components/login/Sign-in";
 import Navbar from "../components/home/Navbar";
 
-export const Login = () => {
+export const HealthTracker = () => {
   return (
     <>
-      <main className="container3">
+      <main>
         <Navbar />
-        <SignIn />
+        <Tracker />
         <Footer />
       </main>
     </>
