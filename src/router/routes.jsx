@@ -3,6 +3,7 @@ import Landing from "../pages/Landing";
 import { Register } from "../pages/Register";
 import { Login } from "../pages/Login";
 import { HealthTracker } from "../pages/HealthTracker";
+import { ReportPage } from "../pages/ReportPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
   {
     path: "tracker",
     element: <HealthTracker />,
+  },
+  {
+    path: "*",
+    element: <Landing />,
+  },
+  {
+    path: "report",
+    element: <ReportPage />,
   },
 ]);
 
