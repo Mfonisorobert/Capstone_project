@@ -13,9 +13,9 @@ const Navbar = ({ login }) => {
       </div>
       <ul className="navbar__ul">
         <li>
-          <a href="#home" className="nav-link">
+          <Link to={"/"} className="nav-link">
             Home
-          </a>
+          </Link>
         </li>
         <li>
           <a href="#Our_features" className="nav-link">
