@@ -1,33 +1,74 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Report-List.css";
 import Funnel1 from "./Funnel1";
 import Search1 from "./Search1";
 import Doc1 from "./Doc1";
 import BarChart4 from "./BarChart4";
-import { reportData } from "./Report-Data";
+// import { reportData } from "./Report-Data";
 import ArrowLeft from "./ArrowLeft";
 import ArrowRight from "./ArrowRight";
+import { useNavigate } from "react-router-dom";
 
 const Report = ({ item, i }) => {
   return (
     <tr className="report-body">
-      <td className={i % 2 === 0 ? "" : "even"}>{item.bloodTemp || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.pulseRate || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.respRate || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.bloodPressure || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.bloodOxygen || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.bodyWeight || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.bloodGlucose || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.walking || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.jogging || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.running || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.cycling || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.skipping || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.yoga || "-"}</td>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.dance || "-"}</td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.vitals.bloodTemp || "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.vitals.pulseRate || "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.vitals.respRate || "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.vitals.bloodPressure || "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {`${item.vitals.bloodOxygen}%` || "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.vitals.bodyWeight ? `${item.vitals.bodyWeight}kg` : "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.vitals.bloodGlucose ? `${item.vitals.bloodGlucose}mg/DL` : "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.exerciseLog.walking ? `${item.exerciseLog.walking}km` : "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.exerciseLog.jogging ? `${item.exerciseLog.jogging}km` : "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.exerciseLog.running ? `${item.exerciseLog.running}km` : "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.exerciseLog.cycling ? `${item.exerciseLog.cycling}km` : "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.exerciseLog.skipping
+          ? `${item.exerciseLog.skipping} counts`
+          : "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.exerciseLog.yoga ? calcTime(item.exerciseLog.yoga) : "-"}
+      </td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.exerciseLog.dance ? calcTime(item.exerciseLog.dance) : "-"}
+      </td>
     </tr>
   );
 };
+
+function calcTime(time) {
+  if (time < 60) {
+    let minOrHr = "min";
+    return `${time} ${minOrHr}`;
+  } else {
+    let minOrHr = "hr";
+    return `${(time / 60).toFixed(1)} ${minOrHr}`;
+  }
+}
 
 const Pagination = () => {
   return (
@@ -58,7 +99,9 @@ const Pagination = () => {
 const ReportDates = ({ item, i }) => {
   return (
     <tr>
-      <td className={i % 2 === 0 ? "" : "even"}>{item.date || "-"}</td>
+      <td className={i % 2 === 0 ? "" : "even"}>
+        {item.date.slice(0, 10) || "-"}
+      </td>
     </tr>
   );
 };
@@ -68,6 +111,36 @@ const ReportDates = ({ item, i }) => {
 // };
 
 const ReportList = () => {
+  const navigate = useNavigate();
+  const [reportData, setreportData] = useState([]);
+
+  useEffect(() => {
+    const fetchReportData = async () => {
+      try {
+        const response = await fetch(
+          "https://lifetrak.onrender.com/api/healthstats",
+          {
+            method: "GET",
+            credentials: "include",
+          }
+        );
+
+        if (!response.ok) {
+          localStorage.removeItem("user");
+          navigate("/login");
+          throw new Error(`Error: ${response.status} ${response.statusText}`);
+        }
+        const data = await response.json();
+        setreportData(data);
+        console.log(data);
+        console.log(reportData);
+      } catch (error) {
+        window.alert("Please Log In");
+      }
+    };
+
+    fetchReportData();
+  }, []);
   return (
     <>
       <main className="trackerbg">
@@ -93,10 +166,10 @@ const ReportList = () => {
             </button>
           </div>
           <div className="filters-right">
-            <div>
+            {/* <div>
               <Search1 />
               <input type="text" id="search" placeholder="Search..." />
-            </div>
+            </div> */}
             <button>
               <Doc1 />
               <p className="export">Export PDF</p>
@@ -146,7 +219,7 @@ const ReportList = () => {
             </tbody>
           </table>
         </div>
-        <Pagination />
+        {/* <Pagination /> */}
       </main>
     </>
   );
