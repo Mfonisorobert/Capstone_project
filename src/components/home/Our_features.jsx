@@ -1,5 +1,5 @@
 import React from "react";
-import jam_medical from "../../assets/jam_medical.jpg";
+import jam_medical from "../../assets/Jam_medical.jpg";
 import wave from "../../assets/wave.png";
 import medbrief from "../../assets/medbrief.jpg";
 import reminder from "../../assets/reminder.png";
