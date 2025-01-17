@@ -41,7 +41,7 @@ const Navbar = ({ login }) => {
         <div className="bt">
           {login && (
             <Link to={"/login"}>
-              <button className="btn1">Login</button>
+              {/* <button className="btn1">Login</button> */}
             </Link>
           )}
           <Link to={"/register"}>
