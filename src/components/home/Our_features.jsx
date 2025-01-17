@@ -18,7 +18,7 @@ const Our_features = () => {
 
         <div className="square__grid">
       <div className="square1">
-      <div className='text_icon'>
+      <div className='text-icon'>
       <img className='icon1'src={jam_medical} alt="icon"/>
       <h3>Instant Consultation</h3>
       </div>
@@ -32,7 +32,7 @@ const Our_features = () => {
 
 
       <div className="square2">
-      <div className='text_icon'>
+      <div className='text-icon'>
       <img className='icon2' src={wave} alt="icon"/>
       <h3>Health Tracking</h3>
       </div>
@@ -44,7 +44,7 @@ const Our_features = () => {
 
 
       <div className="square3">
-      <div className='text_icon'>
+      <div className='text-icon'>
       <img className='icon3'src={medbrief} alt="icon"/>
       <h3>Personalized Fitness Plans</h3>
       </div>
@@ -60,7 +60,7 @@ const Our_features = () => {
       
       <div className='square2__grid'>
       <div className="square4">
-      <div className='text_icon'>
+      <div className='text-icon'>
       <img className='icon4'src={reminder} alt="icon"/>
       <h3>Health Reminder</h3>
       </div>
@@ -74,7 +74,7 @@ const Our_features = () => {
 
 
       <div className="square5">
-      <div className='text_icon'>
+      <div className='text-icon'>
       <img className='icon5'src={wifi} alt="icon"/>
       <h3>Offline Access</h3>
       </div>
